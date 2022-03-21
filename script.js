@@ -10,6 +10,9 @@ function createGrid(container, gridSize) {
 
         for (let cols = 0; cols < gridSize; cols++) {
             const gridSquare = document.createElement('div');
+            gridSquare.addEventListener('mouseover', (e) => {
+                e.target.classList.add('hover');
+            });
 
             gridSquare.classList.add('grid-square');
             gridSquare.style.flex = '1';
