@@ -1,15 +1,20 @@
 function createGrid(container, gridSize) {
     for (let rows = 0; rows < gridSize; rows++) {
         const row = document.createElement('div');
+
         row.classList.add('row');
+        row.style.flex = '1';
         row.style.display = 'flex';
+
         container.appendChild(row);
+
         for (let cols = 0; cols < gridSize; cols++) {
-            const div = document.createElement('div');
-            div.classList.add('grid-square');
-            div.style.width = '50px';
-            div.style.height = '50px';
-            row.appendChild(div);
+            const gridSquare = document.createElement('div');
+
+            gridSquare.classList.add('grid-square');
+            gridSquare.style.flex = '1';
+
+            row.appendChild(gridSquare);
         }
     }
 }
