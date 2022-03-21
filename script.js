@@ -22,7 +22,18 @@ function createGrid(container, gridSize) {
     }
 }
 
+function resetGrid() {
+    const gridSquares = document.querySelectorAll('.grid-square');
+
+    gridSquares.forEach((gridSquare) => {
+        gridSquare.classList.remove('hover');
+    });
+}
+
 let gridSize = 16;
 const container = document.querySelector('#container');
+const resetButton = document.querySelector('#reset-button');
+
+resetButton.addEventListener('click', resetGrid);
 
 createGrid(container, gridSize);

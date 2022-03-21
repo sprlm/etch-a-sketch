@@ -4,11 +4,17 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     background-color: #eee;
-    justify-content: center;
     align-items: center;
     height: 100%;
     margin: 0;
+}
+
+#reset-button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    margin: 10px;
 }
 
 #container {
